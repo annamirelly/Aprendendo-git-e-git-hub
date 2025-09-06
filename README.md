@@ -156,31 +156,31 @@ Tudo isso sem interferir no desenvolvimento da versão 2.0.
 # Lista todos os branches locais
 git branch
 
-# Cria um novo branch chamado "nova-feature"
+ Cria um novo branch chamado "nova-feature"
 git branch nova-feature
 
-# Muda para o branch "nova-feature"
+ Muda para o branch "nova-feature"
 git checkout nova-feature
 
-# Atalho: cria e já muda para um novo branch
+ Atalho: cria e já muda para um novo branch
 git checkout -b outra-feature
 
-# Use `switch` (mais moderno e claro para navegar)
+ Use `switch` (mais moderno e claro para navegar)
 git switch minha-feature
 
-# Atalho com switch: cria e já muda
+ Atalho com switch: cria e já muda
 git switch -c minha-outra-feature
 
-# Depois de terminar o trabalho no branch, volte para o main
+ Depois de terminar o trabalho no branch, volte para o main
 git switch main
 
-# Une as mudanças de "outra-feature" no branch atual (main)
+ Une as mudanças de "outra-feature" no branch atual (main)
 git merge outra-feature
 
-# Deleta o branch localmente (após o merge)
+ Deleta o branch localmente (após o merge)
 git branch -d outra-feature
 
-# Força a deleção de um branch (cuidado!)
+ Força a deleção de um branch (cuidado!)
 git branch -D outra-feature
 ## Branches (Parte 2)
 ### 1. O que é o git rebase?
