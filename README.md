@@ -209,9 +209,9 @@ C1 -- C2 -- C5 -- (main)
 ```
 Seus commits originais são descartados e novos commits (C3', C4') com as mesmas mudanças são criados. A história do seu branch foi reescrita para parecer que seu trabalho começou depois do C5.
 
-[!Tip]
+> [!Tip]
 
-**Nunca faça rebase em um branch público/compartilhado que outras pessoas estejam usando (como o `main` ou `develop`)**. Fazer isso reescreve a história que outras pessoas já baixaram, causando um caos absoluto quando elas tentarem sincronizar suas mudanças. Use o rebase principalmente em seus branches locais, antes de compartilhá-los.
+>Nunca faça rebase em um branch público/compartilhado que outras pessoas estejam usando (como o `main` ou `develop`)**. Fazer isso reescreve a história que outras pessoas já baixaram, causando um caos absoluto quando elas tentarem sincronizar suas mudanças. Use o rebase principalmente em seus branches locais, antes de compartilhá-los.
 
 ## 2. Diferença Fundamental: merge vs. rebase
 | Característica |	`git merge` |	`git rebase` |
