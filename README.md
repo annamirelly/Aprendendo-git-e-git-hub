@@ -1,3 +1,5 @@
+> [TIP]
+> Para melhor visualização, use fonte monoespaçada como ligaturas | [(Exemplo)](https://www.jetbrains.com/pt-br/lp/mono/)
 # Github Testes
 Testando agora git no terminal
 
