@@ -241,11 +241,16 @@ C1 -- C2 ------ C5  (main)
 ```
 ### Prós do Merge
 ✅ **Rastreabilidade e Fidelidade:** O histórico é 100% fiel ao que aconteceu. Fica claro que houve um trabalho paralelo e um momento exato de integração. É um registro histórico preciso.
+
 ✅ **Segurança e Simplicidade:** É uma operação não-destrutiva. Seus commits existentes permanecem intocados. Isso torna o merge mais seguro e fácil de entender, especialmente para equipes com membros menos experientes.
+
 ✅ **Contexto Preservado:** O grafo mostra o contexto de onde e quando cada branch foi criado e unido, o que pode ser útil para depuração de processos complexos.
-Contras do Merge
+
+### Contras do Merge
 ❌ **Histórico Poluído:** Em projetos com muitos branches e desenvolvedores, o histórico do main pode se tornar uma teia de aranha de merge commits, tornando muito difícil seguir a linha de desenvolvimento principal.
+
 ❌ **Dificulta a Leitura:** Os commits de merge ("Merge branch 'x' into 'y'") adicionam ruído. Encontrar commits específicos que introduziram uma mudança pode se tornar mais complicado.
+
 ### Fluxo de Trabalho com git rebase
 Você atualiza seu branch de feature reescrevendo sua base para o topo da `main.`
 
@@ -262,12 +267,18 @@ C1 -- C2 ------ C5  (main)
 ```
 #### prós do Rebase
 ✅ **Histórico Linear e Limpo:** Este é o principal benefício. O histórico do projeto se torna uma linha reta, fácil de ler do início ao fim. É como ler os capítulos de um livro em ordem.
+
 ✅ **Facilita a Revisão de Código (Code Review):** Ao abrir um Pull Request, todos os seus commits estarão agrupados e sequenciais no topo da main, sem merge commits intermediários para atrapalhar a revisão.
+
 ✅ **Commits mais Atômicos:** Facilita a gestão de commits. Com o rebase interativo (git rebase -i), você pode organizar, juntar (squash) ou reescrever seus commits antes de compartilhá-los, deixando seu trabalho mais coeso.
-Contras do Rebase
+
+### Contras do Rebase
 ❌ **Reescreve a História:** É uma operação destrutiva. Usá-la incorretamente em um branch compartilhado (como o main) é a receita para o desastre em equipe. A "dica do rebase" é fundamental.
+
 ❌ **Perde o Contexto:** Você perde a informação de quando o trabalho realmente começou em relação ao branch principal. Para auditorias ou depurações históricas, isso pode ser uma desvantagem.
+
 ❌ **Resolução de Conflitos mais Complexa:** Se vários dos seus commits entram em conflito com as mudanças da main, você terá que resolver conflitos repetidamente para cada commit que está sendo reaplicado, o que pode ser tedioso e propenso a erros.
+
 ### Conclusão: Qual e Quando Usar?
 A melhor abordagem, adotada pela maioria das equipes profissionais, é **usar os dois**, aproveitando o melhor de cada um:
 
